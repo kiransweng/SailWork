@@ -16,3 +16,4 @@ export class HamburgerComponent implements OnInit {
 
   ngOnInit() {
   }
+}
