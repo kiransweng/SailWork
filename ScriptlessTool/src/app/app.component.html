@@ -1,2 +1,16 @@
-<app-home></app-home>
+<!--<app-home></app-home>-->
 <!-- <app-login></app-login> -->
+
+
+<app-tabs>
+      <app-tab [tabTitle]="'Automation Script'">
+        <label>Script Name:</label>
+        <input type="text" id="scriptname" />
+      </app-tab>
+
+      <app-tab tabTitle="Manual Testcase">
+        <button type="submit" name="submit">Submit</button>
+      </app-tab>
+      
+      <app-tab tabTitle="Testdata">Testdata</app-tab>
+</app-tabs>

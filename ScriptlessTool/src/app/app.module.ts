@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { TitleHeaderComponent } from './guiComponents/title-header/title-header.component';
 import { HamburgerComponent } from './guiComponents/hamburger/hamburger.component';
 import { MainMenuComponent } from './guiComponents/main-menu/main-menu.component';
+import { TabsComponent } from './guiComponents/tabs/tabs.component';
+import { TabComponent } from './guiComponents/tab/tab.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { MainMenuComponent } from './guiComponents/main-menu/main-menu.component
     HomeComponent,
     TitleHeaderComponent,
     HamburgerComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    TabsComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule
