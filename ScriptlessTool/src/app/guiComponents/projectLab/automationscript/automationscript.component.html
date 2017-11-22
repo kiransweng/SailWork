@@ -1,0 +1,8 @@
+<ng-template #container>
+</ng-template>
+
+<div id="add-params">
+    <select id="param-dropdown" [(ngModel)]="selectedParamValue" (change)="addParamControls($event, $event.target.value)" (click)="resetParamDropDownValue()">
+        <option [ngValue]="param" *ngFor="let param of params">{{param.value}}</option>
+    </select>
+</div>

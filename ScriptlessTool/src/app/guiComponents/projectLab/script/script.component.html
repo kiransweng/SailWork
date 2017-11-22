@@ -1,0 +1,39 @@
+<!--Script creation & Open buttons -->
+<div id="script-buttons">
+    <input type="file" id="scripts-location" style="display:none;" />
+
+    <input type="button" id="createScript" onclick="document.getElementById('scripts-location').click()"
+           value="Create Script" />
+
+    <input type="button" id="openScript" onclick="document.getElementById('scripts-location').click()"
+           value="Open Script" />
+</div>
+
+<!--Script Details -->
+<div id="script-details">
+  <label id="script.name.label">Script Name:</label>
+  <input type = "text" id="auto-script-name" />
+
+  <br>
+  <br>
+
+  <label id="script.path-label">Script Path:</label>
+  <input type = "text" id="auto-script-path" />
+</div>
+
+<br>
+<br>
+
+<div id="tabs">
+  <app-tabs>
+        <app-tab [tabTitle]="'Automation Script'">
+            <app-automationscript></app-automationscript>
+        </app-tab>
+
+        <app-tab tabTitle="Manual Testcase">Manual Testcase</app-tab>
+
+        <app-tab tabTitle="Testdata">
+            <app-testdata></app-testdata>
+        </app-tab>
+  </app-tabs>
+</div>
