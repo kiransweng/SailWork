@@ -13,6 +13,7 @@ import { TabsComponent } from './guiComponents/tabs/tabs.component';
 import { ScriptComponent } from './guiComponents/projectLab/script/script.component';
 import { TestdataComponent } from './guiComponents/projectLab/testdata/testdata.component';
 import { AutomationscriptComponent } from './guiComponents/projectLab/automationscript/automationscript.component';
+import { AddparamsComponent } from './guiComponents/projectLab/automationscript/addparams/addparams.component';
 
 
 @NgModule({
@@ -27,14 +28,15 @@ import { AutomationscriptComponent } from './guiComponents/projectLab/automation
     TabsComponent,
     ScriptComponent,
     TestdataComponent,
-    AutomationscriptComponent
+    AutomationscriptComponent,
+    AddparamsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  entryComponents: [AutomationscriptComponent],
+  entryComponents: [AddparamsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

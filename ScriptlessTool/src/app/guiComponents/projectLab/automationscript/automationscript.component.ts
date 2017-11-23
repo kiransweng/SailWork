@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ComponentFactoryResolver, Type, ViewChild,ViewContainerRef } from '@angular/core';
+import { AddparamsComponent }from './addparams/addparams.component';
 
 @Component({
   selector: 'app-automationscript',
@@ -9,6 +10,7 @@ import { ComponentFactoryResolver, Type, ViewChild,ViewContainerRef } from '@ang
 export class AutomationscriptComponent implements OnInit {
 
   @Output() selectedParam = new EventEmitter<string>();
+  @Output() selectedStep = new EventEmitter<string>();
 
   params = [
     {value:'Add Params'},
@@ -17,11 +19,20 @@ export class AutomationscriptComponent implements OnInit {
     {value:'Path Params'}
   ];
 
+  steps = [
+    {value:'Add Steps'},
+    {value:'Get Method'},
+    {value:'Post Method'},
+    {value:'Delete Method'}
+  ];
+
   selectedParamValue: any;
+  selectedStepValue: any;
 
-  @ViewChild('container', {read: ViewContainerRef}) container: ViewContainerRef;
+  @ViewChild('paramscontainer', {read: ViewContainerRef}) paramscontainer: ViewContainerRef;
+  @ViewChild('stepscontainer', {read: ViewContainerRef}) stepscontainer: ViewContainerRef;
 
-  components = [];
+  paramComponents = [];
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
@@ -32,14 +43,29 @@ export class AutomationscriptComponent implements OnInit {
       var selectedVal = this.params[parseInt(paramdropdownvalue.substring(0,1))].value;
       this.selectedParam.emit(paramdropdownvalue)
       var componentFactory: any = undefined;
-      componentFactory = this.componentFactoryResolver.resolveComponentFactory(AutomationscriptComponent);
-      const component = this.container.createComponent(componentFactory);
-      this.components.push(component);
+      componentFactory = this.componentFactoryResolver.resolveComponentFactory(AddparamsComponent);
+      const component = this.paramscontainer.createComponent(componentFactory);
+      this.paramComponents.push(component);
 
       return true;
   }
 
   resetParamDropDownValue(){
     this.selectedParamValue = this.params[0];
+  }
+
+  addStepControls(e: Event, stepdropdownvalue: string){
+      var selectedVal = this.params[parseInt(stepdropdownvalue.substring(0,1))].value;
+      this.selectedStep.emit(stepdropdownvalue)
+      var componentFactory: any = undefined;
+      componentFactory = this.componentFactoryResolver.resolveComponentFactory(AddparamsComponent);
+      const component = this.stepscontainer.createComponent(componentFactory);
+      this.paramComponents.push(component);
+
+      return true;
+  }
+
+  resetStepDropDownValue(){
+    this.selectedStepValue = this.steps[0];
   }
 }

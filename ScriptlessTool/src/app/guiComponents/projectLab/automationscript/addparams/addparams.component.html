@@ -1,0 +1,19 @@
+<div id="param-border">
+  <a href="#hide" id="hide" class="expandcollapse">+</a>
+  <a href="#show" id="show" class="expandcollapse">-</a>
+  <label>Query Params</label>
+
+  <div class="nested-elements">
+      <input type="text" id="query-param-textbox"/>
+      <a id="remove" href="#">Remove</a>
+  </div>
+</div>
+
+<app-automationscript (selectedParam)="setParam($event)"></app-automationscript>
+
+<!-- <ng-template #addQueryParamWithoutHeader>
+  <div class="nested-elements">
+      <input type="text" id="query-param-textbox"/>
+      <a id="remove" href="#">Remove</a>
+  </div>
+</ng-template> -->
