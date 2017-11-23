@@ -1,0 +1,26 @@
+.nested-elements,
+#show:target,
+#hide {
+    display: none;
+}
+
+#show:target + #hide,
+#show:target ~ .nested-elements {
+    display: inline;
+}
+
+label {
+  text-align: left;
+  font-size: 15px;
+}
+
+.expandcollapse{
+  font-size: 24px;
+  font-weight: 200px;
+  text-decoration: none;
+  border: 2px solid blue;
+  background-color: lightgrey;
+  color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+}

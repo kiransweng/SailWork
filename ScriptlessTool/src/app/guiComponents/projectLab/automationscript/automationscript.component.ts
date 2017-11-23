@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ComponentFactoryResolver, Type, ViewChild,ViewContainerRef } from '@angular/core';
-import { AddparamsComponent } from './addparams/addparams.component';
 
 @Component({
   selector: 'app-automationscript',
@@ -31,18 +30,9 @@ export class AutomationscriptComponent implements OnInit {
 
   addParamControls(e: Event, paramdropdownvalue: string){
       var selectedVal = this.params[parseInt(paramdropdownvalue.substring(0,1))].value;
-
       this.selectedParam.emit(paramdropdownvalue)
-
       var componentFactory: any = undefined;
-      // if(selectedVal === 'Header Params'){
-      //   componentFactory = this.componentFactoryResolver.resolveComponentFactory(AddparamsComponent);
-      // }else{
-      //   return false;
-      // }
-
-      componentFactory = this.componentFactoryResolver.resolveComponentFactory(AddparamsComponent);
-
+      componentFactory = this.componentFactoryResolver.resolveComponentFactory(AutomationscriptComponent);
       const component = this.container.createComponent(componentFactory);
       this.components.push(component);
 
@@ -52,7 +42,4 @@ export class AutomationscriptComponent implements OnInit {
   resetParamDropDownValue(){
     this.selectedParamValue = this.params[0];
   }
-
-
-
 }
