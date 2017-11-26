@@ -14,6 +14,8 @@ import { ScriptComponent } from './guiComponents/projectLab/script/script.compon
 import { TestdataComponent } from './guiComponents/projectLab/testdata/testdata.component';
 import { AutomationscriptComponent } from './guiComponents/projectLab/automationscript/automationscript.component';
 import { AddparamsComponent } from './guiComponents/projectLab/automationscript/addparams/addparams.component';
+import { QueryparamsComponent } from './guiComponents/projectLab/automationscript/queryparams/queryparams.component';
+import { QueryparamsheaderComponent } from './guiComponents/projectLab/automationscript/queryparamsheader/queryparamsheader.component';
 
 
 @NgModule({
@@ -29,14 +31,16 @@ import { AddparamsComponent } from './guiComponents/projectLab/automationscript/
     ScriptComponent,
     TestdataComponent,
     AutomationscriptComponent,
-    AddparamsComponent
+    AddparamsComponent,
+    QueryparamsComponent,
+    QueryparamsheaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  entryComponents: [AddparamsComponent],
+  entryComponents: [QueryparamsheaderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,19 +1,14 @@
-<div id="param-border">
-  <a href="#hide" id="hide" class="expandcollapse">+</a>
-  <a href="#show" id="show" class="expandcollapse">-</a>
-  <label>Query Params</label>
-
-  <div class="nested-elements">
-      <input type="text" id="query-param-textbox"/>
-      <a id="remove" href="#">Remove</a>
-  </div>
+<h3>Params</h3>
+<div id="add-params">
+    <select id="param-dropdown" [(ngModel)]="selectedParamValue" (change)="addParamControls($event, $event.target.value)" (click)="resetParamDropDownValue()">
+        <option [ngValue]="param" *ngFor="let param of params">{{param.value}}</option>
+    </select>
 </div>
 
-<app-automationscript (selectedParam)="setParam($event)"></app-automationscript>
+<ng-template #paramscontainer>
+</ng-template>
 
-<!-- <ng-template #addQueryParamWithoutHeader>
-  <div class="nested-elements">
-      <input type="text" id="query-param-textbox"/>
-      <a id="remove" href="#">Remove</a>
-  </div>
-</ng-template> -->
+<br>
+
+
+<!-- <app-automationscript (selectedParam)="setParam($event.target.value)"></app-automationscript> -->

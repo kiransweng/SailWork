@@ -1,17 +1,10 @@
-<div id="add-params">
-    <select id="param-dropdown" [(ngModel)]="selectedParamValue" (change)="addParamControls($event, $event.target.value)" (click)="resetParamDropDownValue()">
-        <option [ngValue]="param" *ngFor="let param of params">{{param.value}}</option>
-    </select>
-</div>
+<app-addparams>Loading...</app-addparams>
 
-<ng-template #paramscontainer>
-</ng-template>
-
-<div id="add-steps">
+<!-- <div id="add-steps">
     <select id="steps-dropdown" [(ngModel)]="selectedStepValue" (change)="addStepControls($event, $event.target.value)" (click)="resetStepDropDownValue()">
         <option [ngValue]="step" *ngFor="let step of steps">{{step.value}}</option>
     </select>
 </div>
 
 <ng-template #stepscontainer>
-</ng-template>
+</ng-template> -->

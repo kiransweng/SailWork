@@ -1,0 +1,41 @@
+.nested-elements,
+#show,
+#hide:target {
+    display: none;
+}
+
+#hide:target + #show,
+#hide:target ~ .nested-elements {
+    display: inline;
+}
+
+label {
+  text-align: left;
+  font-size: 15px;
+}
+
+.expandcollapse{
+  font-size: 24px;
+  font-weight: 100px;
+  text-decoration: none;
+  border: 1px solid green;
+  background-color: lightblue;
+  color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#query-param-textbox{
+  width: 150px;
+}
+
+#param-border{
+  min-height: 1px;
+  height: auto;
+  width: 250px;
+  border:0.5px solid grey
+}
+
+#remove{
+  font-size: 10px
+}

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ComponentFactoryResolver, Type, ViewChild,ViewContainerRef } from '@angular/core';
+import { QueryparamsheaderComponent } from '../queryparamsheader/queryparamsheader.component';
 
 @Component({
   selector: 'app-addparams',
@@ -7,15 +9,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddparamsComponent implements OnInit {
 
-  displayQueryParamHeader=false;
+  @Output() selectedParam = new EventEmitter<string>();
 
-  constructor() { }
+  params = [
+    {value:'Add Params'},
+    {value:'Header Params'},
+    {value:'Query Params'},
+    {value:'Path Params'}
+  ];
+
+  selectedParamValue: any;
+  selectedStepValue: any;
+
+  @ViewChild('paramscontainer', {read: ViewContainerRef}) paramscontainer: ViewContainerRef;
+
+  paramComponents = [];
+
+  constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
   }
 
-  setParam(e){
-    this.displayQueryParamHeader=true;
+  addParamControls(e: Event, paramdropdownvalue: string){
+      var selectedVal = this.params[parseInt(paramdropdownvalue.substring(0,1))].value;
+      this.selectedParam.emit(selectedVal);
+      var componentFactory: any = undefined;
+
+      if(selectedVal === 'Query Params'){
+          componentFactory = this.componentFactoryResolver.resolveComponentFactory(QueryparamsheaderComponent);
+      }
+
+      const component = this.paramscontainer.createComponent(componentFactory);
+      this.paramComponents.push(component);
+
+      return true;
+
+
+  }
+
+  resetParamDropDownValue(){
+    this.selectedParamValue = this.params[0];
   }
 
 }
