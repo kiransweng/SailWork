@@ -1,9 +1,13 @@
 <div id="param-border">
-  <a href="#hide" id="hide" class="expandcollapse">+</a>
-  <a href="#show" id="show" class="expandcollapse">-</a>
+  <a href="#qp-hide" id="qp-hide" class="expandcollapse">+</a>
+  <a href="#qp-show" id="qp-show" class="expandcollapse">-</a>
   <label>Query Params</label>
-  <div class="nested-elements">
-      <input type="text" id="query-param-textbox"/>
-      <a id="remove" href="#">Remove</a>
+  <br />
+  <br />
+  <div class="qp-nested-elements">
+      <button id="query-params-add" (click)="addQueryParams()"><b>Add</b></button>
+      <br>
+      <ng-template #queryparamcontainer>
+      </ng-template>
   </div>
 </div>

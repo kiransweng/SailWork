@@ -1,14 +1,31 @@
 <h3>Params</h3>
-<div id="add-params">
+<!-- <div id="add-params">
     <select id="param-dropdown" [(ngModel)]="selectedParamValue" (change)="addParamControls($event, $event.target.value)" (click)="resetParamDropDownValue()">
         <option [ngValue]="param" *ngFor="let param of params">{{param.value}}</option>
     </select>
 </div>
 
 <ng-template #paramscontainer>
-</ng-template>
+</ng-template> -->
 
-<br>
+<ul>
+  <li>
+    <div id="query-param-header">
+      <app-queryparamsheader></app-queryparamsheader>
+    </div>
+  </li>
 
+  <li>
+    <div id="header-param-header">
+      <app-headerparamsheader></app-headerparamsheader>
+    </div>
+  </li>
 
-<!-- <app-automationscript (selectedParam)="setParam($event.target.value)"></app-automationscript> -->
+  <li>
+    <div id="path-param-header">
+      <app-pathparamsheader></app-pathparamsheader>
+    </div>
+  </li>
+</ul>
+
+<h3>Steps</h3>

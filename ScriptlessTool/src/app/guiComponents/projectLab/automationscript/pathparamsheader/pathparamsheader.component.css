@@ -1,11 +1,11 @@
-.qp-nested-elements,
-#qp-show,
-#qp-hide:target {
+.pp-nested-elements,
+#pp-show,
+#pp-hide:target {
     display: none;
 }
 
-#qp-hide:target + #qp-show,
-#qp-hide:target ~ .qp-nested-elements {
+#pp-hide:target + #pp-show,
+#pp-hide:target ~ .pp-nested-elements {
     display: inline;
 }
 

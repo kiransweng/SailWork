@@ -16,6 +16,10 @@ import { AutomationscriptComponent } from './guiComponents/projectLab/automation
 import { AddparamsComponent } from './guiComponents/projectLab/automationscript/addparams/addparams.component';
 import { QueryparamsComponent } from './guiComponents/projectLab/automationscript/queryparams/queryparams.component';
 import { QueryparamsheaderComponent } from './guiComponents/projectLab/automationscript/queryparamsheader/queryparamsheader.component';
+import { HeaderparamsheaderComponent } from './guiComponents/projectLab/automationscript/headerparamsheader/headerparamsheader.component';
+import { HeaderparamsComponent } from './guiComponents/projectLab/automationscript/headerparams/headerparams.component';
+import { PathparamsheaderComponent } from './guiComponents/projectLab/automationscript/pathparamsheader/pathparamsheader.component';
+import { PathparamsComponent } from './guiComponents/projectLab/automationscript/pathparams/pathparams.component';
 
 
 @NgModule({
@@ -33,14 +37,22 @@ import { QueryparamsheaderComponent } from './guiComponents/projectLab/automatio
     AutomationscriptComponent,
     AddparamsComponent,
     QueryparamsComponent,
-    QueryparamsheaderComponent
+    QueryparamsheaderComponent,
+    HeaderparamsheaderComponent,
+    HeaderparamsComponent,
+    PathparamsheaderComponent,
+    PathparamsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  entryComponents: [QueryparamsheaderComponent],
+  entryComponents: [
+    QueryparamsComponent,
+    HeaderparamsComponent,
+    PathparamsComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

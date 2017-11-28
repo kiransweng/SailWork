@@ -1,6 +1,17 @@
-#add-params{
-  /*border-top: 30px solid #AAA*/
-  padding: 0px 0px 0px 40px
+#query-param-header,
+#header-param-header,
+#path-param-header
+{
+  padding: 0px 0px 0px 10px;
+}
+
+ul{
+   list-style: none;
+}
+
+li{
+   display:inline-table;
+   width: 20%;
 }
 
 h3{
