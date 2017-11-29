@@ -13,13 +13,13 @@ import { TabsComponent } from './guiComponents/tabs/tabs.component';
 import { ScriptComponent } from './guiComponents/projectLab/script/script.component';
 import { TestdataComponent } from './guiComponents/projectLab/testdata/testdata.component';
 import { AutomationscriptComponent } from './guiComponents/projectLab/automationscript/automationscript.component';
-import { AddparamsComponent } from './guiComponents/projectLab/automationscript/addparams/addparams.component';
-import { QueryparamsComponent } from './guiComponents/projectLab/automationscript/queryparams/queryparams.component';
-import { QueryparamsheaderComponent } from './guiComponents/projectLab/automationscript/queryparamsheader/queryparamsheader.component';
-import { HeaderparamsheaderComponent } from './guiComponents/projectLab/automationscript/headerparamsheader/headerparamsheader.component';
-import { HeaderparamsComponent } from './guiComponents/projectLab/automationscript/headerparams/headerparams.component';
-import { PathparamsheaderComponent } from './guiComponents/projectLab/automationscript/pathparamsheader/pathparamsheader.component';
-import { PathparamsComponent } from './guiComponents/projectLab/automationscript/pathparams/pathparams.component';
+import { AddparamsComponent } from './guiComponents/projectLab/automationscript/params/addparams/addparams.component';
+import { QueryparamsComponent } from './guiComponents/projectLab/automationscript/params/queryparams/queryparams.component';
+import { QueryparamsheaderComponent } from './guiComponents/projectLab/automationscript/params/queryparamsheader/queryparamsheader.component';
+import { HeaderparamsheaderComponent } from './guiComponents/projectLab/automationscript/params/headerparamsheader/headerparamsheader.component';
+import { HeaderparamsComponent } from './guiComponents/projectLab/automationscript/params/headerparams/headerparams.component';
+import { PathparamsheaderComponent } from './guiComponents/projectLab/automationscript/params/pathparamsheader/pathparamsheader.component';
+import { PathparamsComponent } from './guiComponents/projectLab/automationscript/params/pathparams/pathparams.component';
 
 
 @NgModule({

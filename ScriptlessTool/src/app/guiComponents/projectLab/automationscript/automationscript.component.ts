@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddparamsComponent }from './addparams/addparams.component';
+import { AddparamsComponent }from './params/addparams/addparams.component';
 
 @Component({
   selector: 'app-automationscript',
