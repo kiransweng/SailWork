@@ -20,6 +20,8 @@ import { HeaderparamsheaderComponent } from './guiComponents/projectLab/automati
 import { HeaderparamsComponent } from './guiComponents/projectLab/automationscript/params/headerparams/headerparams.component';
 import { PathparamsheaderComponent } from './guiComponents/projectLab/automationscript/params/pathparamsheader/pathparamsheader.component';
 import { PathparamsComponent } from './guiComponents/projectLab/automationscript/params/pathparams/pathparams.component';
+import { AddstepsComponent } from './guiComponents/projectLab/automationscript/steps/addsteps/addsteps.component';
+import { GetmethodComponent } from './guiComponents/projectLab/automationscript/steps/getmethod/getmethod.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { PathparamsComponent } from './guiComponents/projectLab/automationscript
     HeaderparamsheaderComponent,
     HeaderparamsComponent,
     PathparamsheaderComponent,
-    PathparamsComponent
+    PathparamsComponent,
+    AddstepsComponent,
+    GetmethodComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,8 @@ import { PathparamsComponent } from './guiComponents/projectLab/automationscript
   entryComponents: [
     QueryparamsComponent,
     HeaderparamsComponent,
-    PathparamsComponent
+    PathparamsComponent,
+    GetmethodComponent
   ],
   bootstrap: [AppComponent]
 })

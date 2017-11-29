@@ -12,4 +12,10 @@ export class QueryparamsComponent implements OnInit {
   ngOnInit() {
   }
 
+  componentReference:any;
+
+  removeComponent(){
+    this.componentReference.destroy();
+  }
+
 }

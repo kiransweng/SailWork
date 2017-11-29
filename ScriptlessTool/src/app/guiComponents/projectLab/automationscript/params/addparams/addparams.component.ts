@@ -19,7 +19,6 @@ export class AddparamsComponent implements OnInit {
   ];
 
   selectedParamValue: any;
-  selectedStepValue: any;
 
   @ViewChild('paramscontainer', {read: ViewContainerRef}) paramscontainer: ViewContainerRef;
 
@@ -43,8 +42,6 @@ export class AddparamsComponent implements OnInit {
       this.paramComponents.push(component);
 
       return true;
-
-
   }
 
   resetParamDropDownValue(){

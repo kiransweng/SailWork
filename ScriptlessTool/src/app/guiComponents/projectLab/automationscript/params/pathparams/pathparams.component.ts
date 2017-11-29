@@ -12,4 +12,9 @@ export class PathparamsComponent implements OnInit {
   ngOnInit() {
   }
 
+  componentReference:any;
+
+  removeComponent(){
+    this.componentReference.destroy();
+  }
 }

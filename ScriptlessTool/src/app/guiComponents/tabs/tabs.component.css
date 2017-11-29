@@ -2,7 +2,7 @@
   text-align: left;
   list-style: none;
   margin: 0;
-  padding: 0px 0px 10px 70px;
+  padding: 0px 0px 10px 90px;
   line-height: 36px;
   position: relative;
 }
@@ -11,7 +11,7 @@
 .nav.nav-tabs:after {
   position: relative;
   content: "";
-  width: 20%;
+  width: 80%;
   bottom: 0;
   left: 0;
   border-bottom: 1px solid #AAA;
@@ -21,21 +21,25 @@
 .nav.nav-tabs li {
   margin: 0 0px;
   padding: 0 60px;
-  border: 1px solid #AAA;
   background: #ECECEC;
   display: inline-block;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
   position: relative;
   z-index: 0;
 }
 
 .nav.nav-tabs li.active {
   font-weight: bold;
-  text-decoration:underline;
   background-color: #ADD8E6;
   font-size: 15px;
   text-transform:uppercase;
+}
+
+.nav.nav-tabs li {
+  font-weight: bold;
+  background-color: #CCC;
+  font-size: 15px;
 }
 
 .nav.nav-tabs li a:enabled {
@@ -44,12 +48,12 @@
 }
 
 .nav.nav-tabs li:before {
-  border-bottom-right-radius: 36px;
+  border-bottom-right-radius: 48px;
   border-width: 0 1px 1px 0;
 }
 
 .nav.nav-tabs li:after {
-  border-bottom-left-radius: 36px;
+  border-bottom-left-radius: 48px;
   border-width: 0 0 1px 1px;
   font-size: 36px
 }

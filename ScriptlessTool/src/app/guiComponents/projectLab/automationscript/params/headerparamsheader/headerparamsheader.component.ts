@@ -22,6 +22,7 @@ export class HeaderparamsheaderComponent implements OnInit {
   addHeaderParams(){
       var componentFactory: any = this.componentFactoryResolver.resolveComponentFactory(HeaderparamsComponent);
       const component = this.headerparamcontainer.createComponent(componentFactory);
+      component.instance.componentReference = component;
       this.headerParamComponents.push(component);
   }
 }

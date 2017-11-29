@@ -12,15 +12,23 @@
 label {
   text-align: left;
   font-size: 15px;
+  padding-right: 82px;
 }
 
 .expandcollapse{
   font-size: 24px;
   font-weight: 100px;
   text-decoration: none;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   background-color: lightblue;
   color: black;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+#param-border{
+  min-height: 1px;
+  height: auto;
+  width: 200px;
+  background-color: PaleGoldenRod;
 }

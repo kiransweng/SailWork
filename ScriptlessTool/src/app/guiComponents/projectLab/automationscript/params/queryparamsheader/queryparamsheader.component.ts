@@ -23,6 +23,7 @@ export class QueryparamsheaderComponent implements OnInit {
   addQueryParams(){
       var componentFactory: any = this.componentFactoryResolver.resolveComponentFactory(QueryparamsComponent);
       const component = this.queryparamcontainer.createComponent(componentFactory);
+      component.instance.componentReference = component;
       this.queryParamComponents.push(component);
   }
 }
