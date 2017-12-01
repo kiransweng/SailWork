@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PathparamsComponent implements OnInit {
 
+  componentReference: any;
+
   constructor() { }
 
   ngOnInit() {
   }
-
-  var componentReference:any;
 
   removeComponent(){
     this.componentReference.destroy();
