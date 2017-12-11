@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Type } from '@angular/core';
 
 @Component({
   selector: 'app-headerparams',
@@ -12,10 +12,11 @@ export class HeaderparamsComponent implements OnInit {
   ngOnInit() {
   }
 
-  componentReference:any;
+     componentReference: any;
 
   removeComponent(){
-    this.componentReference.destroy();
+    if (this.componentReference) {
+      this.componentReference.destroy();
+    }
   }
-
 }

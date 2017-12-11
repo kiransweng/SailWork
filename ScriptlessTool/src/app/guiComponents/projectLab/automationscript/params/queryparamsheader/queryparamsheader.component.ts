@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentFactoryResolver, Type, ViewChild,ViewContainerRef } from '@angular/core';
+import { ComponentFactoryResolver, ViewChild,ViewContainerRef} from '@angular/core';
 import { QueryparamsComponent } from '../queryparams/queryparams.component';
 
 @Component({
@@ -23,7 +23,9 @@ export class QueryparamsheaderComponent implements OnInit {
   addQueryParams(){
       var componentFactory: any = this.componentFactoryResolver.resolveComponentFactory(QueryparamsComponent);
       const component = this.queryparamcontainer.createComponent(componentFactory);
-      component.instance.componentReference = component;
+      if(component.instance instanceof QueryparamsComponent){
+        component.instance.componentReference = component;
+      }
       this.queryParamComponents.push(component);
   }
 }

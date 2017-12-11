@@ -15,6 +15,8 @@ export class PathparamsComponent implements OnInit {
   componentReference: any;
 
   removeComponent(){
-    this.componentReference.destroy();
+    if (this.componentReference) {
+      this.componentReference.destroy();
+    }
   }
 }

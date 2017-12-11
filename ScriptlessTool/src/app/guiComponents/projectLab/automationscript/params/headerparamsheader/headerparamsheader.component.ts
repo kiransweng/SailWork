@@ -10,19 +10,22 @@ import { HeaderparamsComponent } from '../headerparams/headerparams.component';
 export class HeaderparamsheaderComponent implements OnInit {
 
   @ViewChild('headerparamcontainer', {read: ViewContainerRef}) headerparamcontainer: ViewContainerRef;
+  @ViewChild(HeaderparamsComponent) _ref:HeaderparamsComponent;
 
   headerParamComponents = [];
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {
    }
 
-  ngOnInit() {
-  }
+   ngOnInit() {
+   }
 
   addHeaderParams(){
       var componentFactory: any = this.componentFactoryResolver.resolveComponentFactory(HeaderparamsComponent);
-      const component = this.headerparamcontainer.createComponent(componentFactory);
-      component.instance.componentReference = component;
+      var component = this.headerparamcontainer.createComponent(componentFactory);
+      if(component.instance instanceof HeaderparamsComponent){
+       component.instance.componentReference = component;
+     }
       this.headerParamComponents.push(component);
   }
 }

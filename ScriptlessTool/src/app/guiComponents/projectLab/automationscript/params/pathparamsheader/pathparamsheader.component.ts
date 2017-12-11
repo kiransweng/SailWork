@@ -22,7 +22,9 @@ export class PathparamsheaderComponent implements OnInit {
   addPathParams(){
       var componentFactory: any = this.componentFactoryResolver.resolveComponentFactory(PathparamsComponent);
       const component = this.pathparamcontainer.createComponent(componentFactory);
-      component.instance.componentReference = component;
+      if(component.instance instanceof PathparamsComponent){
+        component.instance.componentReference = component;
+      }
       this.pathParamComponents.push(component);
   }
 

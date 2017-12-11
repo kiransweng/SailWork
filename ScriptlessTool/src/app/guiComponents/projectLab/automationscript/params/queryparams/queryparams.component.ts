@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter, ViewChild, TemplateRef, Type } from '@angular/core';
 
 @Component({
   selector: 'app-queryparams',
@@ -15,7 +15,8 @@ export class QueryparamsComponent implements OnInit {
   componentReference: any;
 
   removeComponent(){
-    this.componentReference.destroy();
+     if (this.componentReference) {
+       this.componentReference.destroy();
+     }
   }
-
 }

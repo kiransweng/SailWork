@@ -27,7 +27,7 @@ import { GetmethodComponent } from './guiComponents/projectLab/automationscript/
 @NgModule({
   declarations: [
     AppComponent,
-    // LoginComponent,
+    LoginComponent,
     HomeComponent,
     TitleHeaderComponent,
     HamburgerComponent,
