@@ -1,34 +1,35 @@
-.hp-nested-elements,
-#hp-show,
-#hp-hide:target {
-    display: none;
-}
-
-#hp-hide:target + #hp-show,
-#hp-hide:target ~ .hp-nested-elements {
-    display: inline;
-}
-
-label {
-  text-align: left;
-  font-size: 15px;
-  padding-right: 64px;
-}
-
-.expandcollapse{
-  font-size: 24px;
-  font-weight: 100px;
-  text-decoration: none;
-  /*border: 1px solid green;*/
-  background-color: lightblue;
-  color: black;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#param-border{
-  min-height: 1px;
-  height: auto;
+#hp-panel{
+  border: 5px 5px 5px 5px;
+  border-style:double;
   width: 200px;
+  padding-bottom: 5px;
   background-color: SandyBrown;
+  text-align: center;
+}
+
+#hp-expand-collapse-checkbox{
+  display: none;
+}
+
+.hp-expand-collapse{
+  cursor: pointer;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.hp-expand-collapse + input{
+  display: block; /* hide the checkboxes */
+}
+
+.hp-expand-collapse + input + div{
+  display:block;
+}
+
+.hp-expand-collapse + input:checked + div{
+  display:none;
+}
+
+label{
+  color: blue;
 }

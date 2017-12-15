@@ -1,34 +1,35 @@
-.qp-nested-elements,
-#qp-show,
-#qp-hide:target {
-    display: none;
-}
-
-#qp-hide:target + #qp-show,
-#qp-hide:target ~ .qp-nested-elements {
-    display: inline;
-}
-
-label {
-  text-align: left;
-  font-size: 15px;
-  padding-right: 71px;
-}
-
-.expandcollapse{
-  font-size: 24px;
-  font-weight: 100px;
-  text-decoration: none;
-  /*border: 1px solid green;*/
-  background-color: lightblue;
-  color: black;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#param-border{
-  min-height: 1px;
-  height: auto;
+#qp-panel{
+  border: 10px 10px 10px 10px;
+  border-style:double;
   width: 200px;
-  background-color: MediumTurquoise;
+  padding-bottom: 5px;
+  background-color: wheat;
+  text-align: center;
+}
+
+#qp-expand-collapse-checkbox{
+  display: none;
+}
+
+.qp-expand-collapse{
+  cursor: pointer;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.qp-expand-collapse + input{
+  display: block; /* hide the checkboxes */
+}
+
+.qp-expand-collapse + input + div{
+  display:block;
+}
+
+.qp-expand-collapse + input:checked + div{
+  display:none;
+}
+
+label{
+  color: red;
 }

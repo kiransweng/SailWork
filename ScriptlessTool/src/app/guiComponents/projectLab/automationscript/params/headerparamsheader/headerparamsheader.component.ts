@@ -15,7 +15,7 @@ export class HeaderparamsheaderComponent implements OnInit {
   headerParamComponents = [];
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {
-   }
+  }
 
    ngOnInit() {
    }

@@ -1,34 +1,35 @@
-.pp-nested-elements,
-#pp-show,
-#pp-hide:target {
-    display: none;
-}
-
-#pp-hide:target + #pp-show,
-#pp-hide:target ~ .pp-nested-elements {
-    display: inline;
-}
-
-label {
-  text-align: left;
-  font-size: 15px;
-  padding-right: 82px;
-}
-
-.expandcollapse{
-  font-size: 24px;
-  font-weight: 100px;
-  text-decoration: none;
-  /*border: 1px solid green;*/
-  background-color: lightblue;
-  color: black;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#param-border{
-  min-height: 1px;
-  height: auto;
+#pp-panel{
+  border: 5px 5px 5px 5px;
+  border-style:double;
   width: 200px;
-  background-color: PaleGoldenRod;
+  padding-bottom: 5px;
+  background-color:lightgreen;
+  text-align: center;
+}
+
+#pp-expand-collapse-checkbox{
+  display: none;
+}
+
+.pp-expand-collapse{
+  cursor: pointer;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.pp-expand-collapse + input{
+  display: block; /* hide the checkboxes */
+}
+
+.pp-expand-collapse + input + div{
+  display:block;
+}
+
+.pp-expand-collapse + input:checked + div{
+  display:none;
+}
+
+label{
+  color: brown;
 }

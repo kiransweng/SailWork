@@ -15,7 +15,7 @@ export class QueryparamsheaderComponent implements OnInit {
   queryParamComponents = [];
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {
-   }
+  }
 
   ngOnInit() {
   }

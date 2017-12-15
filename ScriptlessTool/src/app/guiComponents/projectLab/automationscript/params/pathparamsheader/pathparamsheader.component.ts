@@ -14,7 +14,7 @@ export class PathparamsheaderComponent implements OnInit {
   pathParamComponents = [];
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {
-   }
+  }
 
   ngOnInit() {
   }
