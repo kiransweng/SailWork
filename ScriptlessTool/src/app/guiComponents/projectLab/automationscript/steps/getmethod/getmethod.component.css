@@ -1,7 +1,7 @@
 #gm-panel{
   width: 500px;
-  padding: 30px 10px 0px 30px;
-  padding-bottom: 10px;
+  border: 10px 10px 10px 10px;
+  border-style:ridge;
 }
 
 #gm-expand-collapse-checkbox{
@@ -11,8 +11,8 @@
 .gm-expand-collapse{
   cursor: pointer;
   display: block;
-  margin-bottom: 5px;
   font-size: 20px;
+  background-color: silver;
 }
 
 .gm-expand-collapse + input{
@@ -25,8 +25,4 @@
 
 .gm-expand-collapse + input:checked + div{
   display:none;
-}
-
-label{
-  background-color: LightSteelBlue;
 }
