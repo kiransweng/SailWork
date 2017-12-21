@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  scripts_tree_structure = [
+      {
+        'folder': 'Root',
+        'contents': [
+                      {
+                        'contents': [
+                                    {'Name': 'Java'},
+                                    {'Name':'C#'},
+                                    {'Name': 'Python'}
+                        ]
+                      }
+                    ]
+      }
+  ];
 }
