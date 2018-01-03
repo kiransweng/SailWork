@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const mongoose = require('mongoose');
 
 var exec = require('child_process').exec;
@@ -13,7 +12,7 @@ var index=require('./routes/index');
 
 const app = express();
 const port = 3000;
-const ipAddress = '20.202.36.246';
+const ipAddress = '192.168.1.34';
 
 app.set('views', __dirname + '/');
 app.set('view engine','ejs');
