@@ -2,10 +2,10 @@
 <div id="script-buttons">
     <input type="file" id="scripts-location" style="display:none;" />
 
-    <input type="button" id="createScript" onclick="document.getElementById('scripts-location').click()"
+    <input type="button" id="createScript" (click)="createScript()"
            value="Create Script" />
 
-    <input type="button" id="openScript" onclick="document.getElementById('scripts-location').click()"
+    <input type="button" id="openScript" (click)="openScript()"
            value="Open Script" />
 </div>
 

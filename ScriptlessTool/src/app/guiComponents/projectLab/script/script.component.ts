@@ -14,4 +14,17 @@ export class ScriptComponent implements OnInit {
   ngOnInit() {
   }
 
+  createScript():any{
+      var flag = true;
+      var scriptName;
+      while(flag){
+          scriptName = prompt("Enter script name:");
+
+          if(scriptName == null || scriptName != ""){
+            flag = false;
+          }else{
+            scriptName = scriptName.replace(/[^a-zA-Z0-9]/g, "");
+          }
+      }
+  }
 }
