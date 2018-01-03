@@ -14,7 +14,7 @@ import { UserDataComponent } from './user-data/user-data.component';
 @NgModule({
   declarations: [
     AppComponent,
-    // LoginComponent,
+    LoginComponent,
     HomeComponent,
     TitleHeaderComponent,
     HamburgerComponent,

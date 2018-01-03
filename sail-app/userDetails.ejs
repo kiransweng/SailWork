@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+    <style>
+        /* table {
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            align-content: center;
+        } */
+
+        h1{
+          text-align: center;
+          text-decoration: underline;
+          color: Coral;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2}
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+     </style>
+  </head>
+
+  <body>
+    <h1>User Details</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <% for(var i=0; i < usersInfo.length; i++) { %>
+       <tr>
+
+         <td><%= usersInfo[i].firstName %></td>
+         <td><%= usersInfo[i].lastName %></td>
+         <td><%= usersInfo[i].email %></td>
+
+
+       </tr>
+    <% } %>
+      </tbody>
+
+    </table>
+  </body>
+</html>
