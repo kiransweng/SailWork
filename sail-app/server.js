@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const config = require('./config.js')
 
 var exec = require('child_process').exec;
 var child;
@@ -12,7 +13,6 @@ var index=require('./routes/index');
 
 const app = express();
 const port = 3000;
-const ipAddress = '192.168.1.34';
 
 app.set('views', __dirname + '/');
 app.set('view engine','ejs');
@@ -71,6 +71,6 @@ app.get('/userDetails', function(request,response){
 });
 
 //start server
-app.listen(port, ipAddress, () =>{
-  console.log('Server started on port ' + port);
+app.listen(port, config.ipAddress, () =>{
+  console.log('Server started on host ' + config.ipAddress + ' on port ' + port);
 });
