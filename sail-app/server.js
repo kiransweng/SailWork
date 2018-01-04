@@ -43,10 +43,21 @@ app.post('/', function(request, response){
 
       response.body = "<b>" + firstName + " " + lastName + "</b> details are saved!!!";
       response.write(response.body);
-      response.write("<br><a href='/'>BACK</a>");
+      response.write("<br><br><a href='/'>BACK</a>");
 });
 
 app.get('/userDetails', function(request,response){
+  fs.readFile('data/userDetails.json', 'utf8', function(err, data) {
+      if (err) throw err;
+      var obj = JSON.parse(data);
+      console.log("JSON Data:");
+      console.log(obj);
+
+      response.render('userDetails.ejs', { usersInfo: obj });
+   });
+});
+
+app.get('/userDetails1', function(request,response){
   fs.readFile('data/users.txt', 'utf8', function(err, data) {
        if (err) throw err;
        else{
