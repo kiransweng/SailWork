@@ -34,15 +34,17 @@
             color: white;
         }
 
+        a.button{
+          float: right;
+        }
+
      </style>
   </head>
 
   <body>
     <h1>User Details</h1>
-    <br>
     <a href="/" class="button">BACK</a>
-    <br>
-    <br>
+    <h3>Total records: <%= usersInfo.length || '' %></h3>
     <table class="table">
       <thead>
         <tr>

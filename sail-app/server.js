@@ -28,22 +28,21 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use('/',index);
 
 app.post('/', function(request, response){
-  var firstName = request.body.firstName;
-  var lastName = request.body.lastName;
-  var email = request.body.email;
 
-  child = exec("java utils.MyClass " + firstName + " " + lastName + " " + email, function (error, stdout, stderr) {
-      if (error !== null) {
-        console.log('exec error: ' + error);
-      }
-  });
+      var firstName = request.body.firstName;
+      var lastName = request.body.lastName;
+      var email = request.body.email;
 
-  console.log(firstName + " " + lastName + " details are saved!!!");
+      child = exec("java utils.MyClass " + firstName + " " + lastName + " " + email, function (error, stdout, stderr) {
+          if (error !== null) {
+            console.log('exec error: ' + error);
+          }
+      });
 
-    // response.body = response.body + "<b>" + firstName + " " + lastName + "</b> details are saved!!!";
-    // response.write(response.body);
+      console.log(firstName + " " + lastName + " details are saved!!!");
 
-
+      request.body = "<b>" + firstName + " " + lastName + "</b> details are saved!!!";
+      response.write(request.body);
 });
 
 app.get('/userDetails', function(request,response){
