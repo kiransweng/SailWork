@@ -72,5 +72,5 @@ app.get('/userDetails', function(request,response){
 
 //start server
 app.listen(port, config.ipAddress, () =>{
-  console.log('Server started on host ' + config.ipAddress + ' on port ' + port);
+  console.log('Server started on http://' + config.ipAddress + ':' + port);
 });
