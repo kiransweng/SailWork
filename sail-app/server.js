@@ -41,8 +41,9 @@ app.post('/', function(request, response){
 
       console.log(firstName + " " + lastName + " details are saved!!!");
 
-      request.body = "<b>" + firstName + " " + lastName + "</b> details are saved!!!";
-      response.write(request.body);
+      response.body = "<b>" + firstName + " " + lastName + "</b> details are saved!!!";
+      response.write(response.body);
+      response.write("<br><a href='/'>BACK</a>");
 });
 
 app.get('/userDetails', function(request,response){
