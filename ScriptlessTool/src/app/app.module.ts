@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+import { Http, Headers, HttpModule, Response } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -9,6 +12,11 @@ import { TitleHeaderComponent } from './guiComponents/title-header/title-header.
 import { HamburgerComponent } from './guiComponents/hamburger/hamburger.component';
 import { MainMenuComponent } from './guiComponents/main-menu/main-menu.component';
 import { UserDataComponent } from './user-data/user-data.component';
+import { DisplayUserDetailsComponent } from './display-user-details/display-user-details.component';
+import {ReadJSON} from './utils/readJson';
+import { APP_ROUTES_PROVIDER } from './routes';
+import { NameComponent } from './name/name.component';
+import { EmailComponent } from './email/email.component';
 
 
 @NgModule({
@@ -19,12 +27,23 @@ import { UserDataComponent } from './user-data/user-data.component';
     TitleHeaderComponent,
     HamburgerComponent,
     MainMenuComponent,
-    UserDataComponent
+    UserDataComponent,
+    DisplayUserDetailsComponent,
+    NameComponent,
+    EmailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    HttpClientModule,
+    APP_ROUTES_PROVIDER
   ],
   providers: [],
+  entryComponents: [
+    NameComponent,
+    EmailComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
