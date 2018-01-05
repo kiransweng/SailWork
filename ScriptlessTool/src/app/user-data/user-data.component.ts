@@ -47,4 +47,6 @@ export class UserDataComponent implements OnInit {
     this.selectedStepValue = this.steps[0];
   }
 
+  createUserRecord()
+
 }
