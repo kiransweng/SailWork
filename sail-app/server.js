@@ -19,7 +19,7 @@ app.set('view engine','ejs');
 app.engine('html',require('ejs').renderFile);
 
 //Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../ScriptlessTool/dist')));
 
 //Body Parser Middleware
 app.use(bodyParser.json());
@@ -44,6 +44,7 @@ app.post('/', function(request, response){
       response.body = "<b>" + firstName + " " + lastName + "</b> details are saved!!!";
       response.write(response.body);
       response.write("<br><br><a href='/'>BACK</a>");
+      response.end();
 });
 
 app.get('/userDetails', function(request,response){
